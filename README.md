@@ -15,5 +15,6 @@ Make sure a branch dev-design-mario is correctly design.
 
 2. [Tulio Ferraro]
 
-Contributions*:*
+Contributions*: Bottom half of the page with responsiveness for mobile.
+
 
