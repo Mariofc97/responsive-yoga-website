@@ -17,3 +17,4 @@ Make sure a branch dev-design-mario is correctly design.
 
 Contributions*: Bottom half of the page with responsiveness for mobile.
 
+
