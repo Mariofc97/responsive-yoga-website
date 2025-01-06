@@ -1,20 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoga Website</title>
-    <link rel="stylesheet" type="text/css" href="styles/desktop.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoga Website</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <input type="checkbox" id="dark-mode-checkbox">
+  <div class="header-wrapper">
+    <header>
+      <div class="logo">Yoga</div>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav>
+        <a href="#" class="menu-link">Home</a>
+        <a href="#" class="menu-link">Services 1</a>
+        <a href="#" class="menu-link">Services 2</a>
+        <a href="#" class="menu-link">Contact</a>
+      </nav>
+      <label for="dark-mode-checkbox" class="dark-mode-toggle">
+        <img src="./assets/images/ri_moon-line.png" alt="dark-mode" class="moon">
+        <img src="./assets/images/ri_sun-line.png" alt="light-mode" class="sun">
+      </label>
+    </header>
+  </div>
   <main>
+    <section class="home-section">
+      <div class="text-content">
+        <h1> Choose Your Best <span class="highlight">Yoga</span> <img src="./assets/images/home-star.svg"
+            alt="homer-star"> Teacher</h1>
+        <p>Calm your mind and body with the best yoga teachers available, relax your day and stay positive.</p>
+        <div class="circle-container">
+          <svg class="outer-circle" width="40" height="40">
+            <circle cx="20" cy="20" r="15" fill="none" stroke="#4B0082" stroke-width="3" />
+          </svg>
+          <svg class="inner-circle" width="35" height="35">
+            <defs>
+              <linearGradient id="gradiente" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF69B4;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <circle cx="20" cy="20" r="15" fill="url(#gradiente)" />
+          </svg>
+        </div>
+        <button class="cta-button">Get Started Free &rarr;</button>
+        <div class="stats">
+          <div class="stat">
+            <h2>300+</h2>
+            <p>Yoga Class</p>
+          </div>
+          <div class="stat">
+            <h2>40+</h2>
+            <p>Participants</p>
+          </div>
+        </div>
+      </div>
+      <div class="image-content">
+        <img src="./assets/images/home-yoga.png" alt="Yoga Pose" class="yoga-image">
+      </div>
+    </section>
+    <section class="list-section">
+      <div class="number">#01</div>
+
+      <div class="image-container">
+        <img src="./assets/images/List box.png" alt="list-image">
+      </div>
+
+      <div class="content">
+        <p> Get a list of specific influencers in your niche at your fingertips so you can focus on managing your
+          status.
+          <img src="./assets/images/liststar-2-img.svg" alt="liststars" class="stars">
+        </p>
+        <a href="#" class="next-btn">
+          <svg width="120" height="80" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="60" cy="40" rx="50" ry="20" fill="none" stroke="url(#gradient)" stroke-width="2"
+              transform="rotate(-10 60 40)" />
+            <ellipse cx="60" cy="40" rx="55" ry="25" fill="none" stroke="url(#gradient)" stroke-width="2"
+              transform="rotate(-30 60 40)" />
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF69B4;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>Next &rarr;</span>
+        </a>
+      </div>
+    </section>
+    <section class="container happiness-section">
+      <div class="happiness-left">
+        <img src="./assets/images/health-fitness.png" alt="health-fitness" />
+        <div class="happiness-badge">
+          <img src="./assets/images/heart-icon.png" alt="heart-icon" />
+          <div>
+            <h5 class="badge-title">Heart Rate</h5>
+            <p class="badge-text">158 bpm</p>
+          </div>
+        </div>
+        <div class="happiness-badge-two">
+          <div>
+            <p class="badge-text" style="color: #e63996;">500+</p>
+            <h5 class="badge-title">Free Courses</h5>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="happiness-title">Bring Happiness To Good Health!</h3>
+        <p class="happiness-text">
+          If you take care of your good health, take care of your mentality
+          and lead a healthy life with positive thoughts every day.
+        </p>
+        <a href="#" class="cta-button" style="font-family: Poppins; font-weight: 400;"> Let’s Start &rarr;</a>
+      </div>
+    </section>
+    <section class="container happiness-section">
+      <div>
+        <h3 class="happiness-title" style="margin-left: 0px;">Anytime, Any Place, Any Workout</h3>
+        <p class="happiness-text">
+          Take your routine at any time of your day, with the new videos and
+          with the teachers who will guide you.
+        </p>
+        <a href="#" class="btn btn-darken btn-inline" style="font-family: Poppins; font-weight: 400;"> Get Started Free &rarr;</a>
+      </div>
+      <div class="happiness-left workout-right">
+        <img
+          src="assets/routine-yoga-1.png"
+          alt=""
+          class="workout-img-one"
+        />
+        <img
+          src="assets/routine-yoga-2.png"
+          alt=""
+          class="workout-img-two"
+        />
+        <div class="workout-badge">
+          <img
+            src="assets/icon/ri_play-circle-fill.png"
+            alt=""
+            class="workout-icon"
+          />
+          <div>
+            <p class="badge-text">High Quality Video</p>
+          </div>
+        </div>
+        <div class="workout-badge-two">
+          <img
+            src="assets/icon/ri_run-fill.png"
+            alt=""
+            class="workout-icon"
+          />
+          <div>
+            <p class="badge-text">Professional Trainer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container instagram-section">
+      <div class="instagram-top">
+        <img
+          class="insta-img-1"
+          src="assets/follow-yoga-1.png"
+          alt=""
+        />
+        <div class="instagram-inner">
+          <h3 class="instagram-title">
+            Follow Us On Instagram <br />
+            <span>#YOGA</span>
+          </h3>
+          <a href="#" class="btn btn-darken">Follow 	&rarr;</a>
+        </div>
+        <div class="insta-right-img-box">
+          <img
+            class="insta-img-21"
+            src="assets/follow-yoga-1.png"
+            alt=""
+          />
+          <img
+            class="insta-img-2"
+            src="assets/follow-yoga-2.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="instagram-bottom">
+        <img
+          class="instagram-bottom-img"
+          src="assets/follow-yoga-3.png"
+          alt=""
+        />
+        <img
+          class="instagram-bottom-img"
+          src="assets/follow-yoga-4.png"
+          alt=""
+        />
+      </div>
+    </section>
     <section class="container newsletter-section">
       <h3>Join our newsletter</h3>
-      <p>
+      <p style="padding-left: 0px;">
         Subscribe to our newsletter to be aware of many things on discounts,
         gifts, training and much more. Just enter your email.
       </p>
@@ -24,61 +224,63 @@
           class="input-field"
           placeholder="For latest update send mail"
         />
-        <button type="submit" class="form-btn">subscribe</button>
+        <button type="submit" class="form-btn" style="font-weight: bold; font-family: Poppins; font-weight: 400;">Subscribe 	&rarr;</button>
       </form>
     </section>
   </main>
-    <footer class="footer">
-        <div class="container">
-          <div class="footer-inner">
-            <div>
-              <img src="assets/logo.png" alt="" />
-              <p class="footer-text">
-                Take care of your health and your mind with the best Yoga classes.
-              </p>
-            </div>
-            <div class="footer-menu">
-              <div>
-                <h4>Address</h4>
-                <p>
-                  12345 M/01 Sol <br />
-                  Avenue, Lima, Peru
-                </p>
-              </div>
-              <div>
-                <h4>Contact</h4>
-                <p>
-                  +123 456 7890 <br />
-                  yoga@email.com
-                </p>
-              </div>
-              <div>
-                <h4>Office</h4>
-                <p>
-                  Monday - Saturday <br />
-                  9AM - 10PM
-                </p>
-              </div>
-            </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <img src="assets/logo.png" alt="" />
+          <p class="footer-text" style="padding-left: 0px; margin-top: 40px;">
+            Take care of your health and your mind with the best Yoga classes.
+          </p>
+        </div>
+        <div class="footer-menu">
+          <div>
+            <h4>Address</h4>
+            <p>
+              12345 M/01 Sol <br />
+              Avenue, Lima, Peru
+            </p>
           </div>
-          <div class="footer-bar">
-            <div class="social-media-box">
-              <a href="#">
-                <img src="assets/icon/ri_facebook-circle-line.png" alt=""
-              /></a>
-              <a href="#">
-                <img src="assets/icon/ri_instagram-line.png" alt=""
-              /></a>
-              <a href="#">
-                <img src="assets/icon/ri_twitter-line.png" alt=""
-              /></a>
-              <a href="#">
-                <img src="assets/icon/ri_youtube-line.png" alt=""
-              /></a>
-            </div>
-            <p style="color: #A197B4;">&copy; Copyright Bedimcode. All rights reserved</p>
+          <div>
+            <h4>Contact</h4>
+            <p>
+              +123 456 7890 <br />
+              yoga@email.com
+            </p>
+          </div>
+          <div>
+            <h4>Office</h4>
+            <p>
+              Monday - Saturday <br />
+              9AM - 10PM
+            </p>
           </div>
         </div>
-      </footer>
+      </div>
+      <div class="footer-bar">
+        <div class="social-media-box" style="margin-top: 30px;">
+          <a href="#">
+            <img src="assets/icon/ri_facebook-circle-line.png" alt=""
+          /></a>
+          <a href="#">
+            <img src="assets/icon/ri_instagram-line.png" alt=""
+          /></a>
+          <a href="#">
+            <img src="assets/icon/ri_twitter-line.png" alt=""
+          /></a>
+          <a href="#">
+            <img src="assets/icon/ri_youtube-line.png" alt=""
+          /></a>
+        </div>
+        <p style="color: #A197B4; margin-top: 30px;">&copy; Copyright Bedimcode. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>

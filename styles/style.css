@@ -1,0 +1,660 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+}
+:root {
+  --color-text-white: #fff;
+  --color-text-dark: #0b1423;
+  --color-text-title: #220953;
+  --color-text-paragraph: #4b3e65;
+  --color-bg-white: #f5f0ff;
+  --color-bg-dark: #14092b;
+  --color-bg-badge: #ffffff;
+  --color-bg-button: linear-gradient(90deg, #ff52af 0%, #9f53ff 100%);
+  --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  font-family: "Lora";
+  font-weight: 300;
+  background-color: #F5F0FF;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#dark-mode-checkbox:checked~* {
+  background-color: #14092A;
+  color: #F5F0FF;
+}
+
+.header-wrapper {
+  background-color: #F5F0FF;
+  padding: 10px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+#menu-toggle {
+  display: none;
+  /* Oculta el checkbox */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: "Lora";
+  color: #e63996;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-link {
+  padding: 0 80px;
+  text-decoration: none;
+  font-family: "Poppins";
+  color: #2d1349;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e63996;
+}
+
+
+.dark-mode-toggle {
+  cursor: pointer;
+}
+
+.moon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.sun {
+  display: none;
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+#dark-mode-checkbox:checked+.dark-mode-toggle .sun {
+  display: block;
+}
+
+#dark-mode-checkbox {
+  display: none;
+}
+
+#dark-mode-checkbox:checked~.header-wrapper {
+  background-color: #14092A;
+  color: #F5F0FF;
+}
+
+#dark-mode-checkbox:checked~.header-wrapper .logo {
+  color: #e63996;
+}
+
+#dark-mode-checkbox:checked~.header-wrapper nav a {
+  color: #F5F0FF;
+}
+
+#dark-mode-checkbox:checked~.header-wrapper nav a:hover {
+  color: #e63996;
+}
+
+#dark-mode-checkbox:checked+.dark-mode-toggle .moon {
+  display: none;
+}
+
+#dark-mode-checkbox:checked+.dark-mode-toggle .sun {
+  display: block;
+}
+
+.home-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.text-content {
+  max-width: 50%;
+  font-family: "Lora";
+}
+
+.text-content h1 {
+  font-family: "Lora";
+  font-weight: 300;
+  padding: 25px;
+  font-size: 6rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  display: inline-block;
+  transform: rotate(10deg);
+  background: linear-gradient(55deg, #FF52AF, #9F53FF);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px
+}
+
+p {
+  font-size: 1.2rem;
+  padding-left: 30px;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: 'Poppins';
+}
+
+.circle-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+
+.outer-circle {
+  position: absolute;
+  top: -130px;
+
+}
+
+
+.inner-circle {
+  position: absolute;
+  top: -125px;
+  left: 10px;
+}
+
+.cta-button {
+  display: inline-flex;
+  font-family: "Poppins";
+    align-items: center;
+  background: linear-gradient(55deg, #FF52AF, #9F53FF);
+  color: #fff;
+  border: none;
+  padding: 20px 25px;
+  margin-left: 25px;
+  font-size: 1rem;
+  border-radius: 35px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.stats {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.stat h2 {
+  margin: 15px 0 0;
+  padding-left: 20px;
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.stat p {
+  margin: 5px 0 0;
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #777;
+}
+
+.image-content {
+  position: relative;
+}
+
+.yoga-image {
+  max-width: 100%;
+}
+
+.list-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.list-section .number {
+  font-size: 3rem;
+  color: #4B0082;
+}
+
+
+.list-section .image-container {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.list-section .image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+
+.list-section .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  text-align: left;
+  gap: 20px;
+}
+
+.list-section .content p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.stars {
+  position: absolute;
+  top: -65px;
+  left: 0px;
+  width: 100px;
+
+}
+
+
+.list-section .next-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 120px;
+  height: 80px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FF69B4;
+  margin: 0;
+}
+
+.list-section .next-btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.list-section .next-btn span {
+  margin-left: 30px;
+  width: 120px;
+  position: relative; z-index: 2;
+  color: #FF69B4;
+}
+
+.list-section .next-btn:hover span {
+  color: #8A2BE2;
+}
+
+.happiness-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 70px 0;
+}
+
+.happiness-left img {
+  width: 80%;
+}
+
+.happiness-left {
+  text-align: center;
+  position: relative;
+}
+
+.happiness-badge {
+  position: absolute;
+  font-family: "Poppins";
+  top: 20px;
+  left: 10%;
+  padding: 15px 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.happiness-badge img {
+  width: 24px;
+  height: 24px;
+}
+
+.badge-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d1349;
+}
+
+.badge-text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  /* color: #e63996; */
+  padding-left: 0px;
+  background: var(--color-bg-button); /* Gradient colors */
+  -webkit-background-clip: text; /* Clip the background to the text (WebKit browsers) */
+  background-clip: text; /* Standard property */
+  color: transparent; /* Make the text itself transparent */
+}
+
+.happiness-badge-two {
+  position: absolute;
+  font-family: "Poppins";
+  bottom: 20px;
+  right: 10%;
+  padding: 15px 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.happiness-badge-two .badge-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d1349;
+}
+
+.happiness-badge-two .badge-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
+
+.happiness-title {
+  font-weight: 300;
+  margin-left: 30px;
+  font-size: 4rem;
+  margin-bottom: 15px;
+  color: var(--color-text-title);
+}
+
+.happiness-text {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: var(--color-text-paragraph);
+}
+
+.workout-right {
+  position: relative;
+  width: 50%;
+  height: 600px;
+}
+.workout-img-one {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  width: 100%;
+  height: 250px;
+  z-index: 55;
+}
+.workout-img-two {
+  position: absolute;
+  right: 0;
+  bottom: 75px;
+  width: 100%;
+  height: 250px;
+  z-index: 44;
+}
+.workout-badge {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: var(--color-bg-badge);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 66;
+}
+.workout-icon {
+  width: 30px !important;
+}
+.workout-badge-two {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: var(--color-bg-badge);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 66;
+}
+/* instagram section  */
+.instagram-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10%;
+}
+.insta-img-1 {
+  width: 80%;
+}
+
+.instagram-inner {
+  text-align: center;
+}
+.instagram-title {
+  font-size: 40px;
+  color: var(--color-text-title);
+  text-align: center;
+  font-family: "Lora";
+  font-weight: 300;
+}
+.instagram-title span {
+  background: var(--color-bg-button);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.instagram-bottom {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+.instagram-bottom-img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+.insta-img-21 {
+  display: none;
+}
+/* newsletter section   */
+.newsletter-section {
+  background: var(--color-bg-button);
+  padding: 50px 15%;
+  border-radius: 15px;
+  text-align: center;
+}
+.newsletter-section h3 {
+  color: var(--color-bg-white);
+  font-size: 40px;
+  font-family: "Lora";
+  font-weight: 300;
+}
+.newsletter-section p {
+  color: white;
+  font-size: small;
+}
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 60px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.input-field {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  width: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+}
+.form-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background: var(--color-bg-button);
+  color: var(--color-bg-white);
+  cursor: pointer;
+}
+
+/* footer section  */
+.footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  background-color: var(--color-bg-dark);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+.footer-text {
+  font-size: 14px;
+  color: #A197B4;
+}
+.footer-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.footer-menu h4 {
+  color: var(--color-text-white);
+  font-family: "Lora";
+  font-weight: 300;
+}
+.footer-menu p {
+  margin-top: 10px;
+  color: #A197B4;
+  padding: 0px;
+}
+.footer-bar {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-left: 0px;
+  border-top: 2px solid var(--color-text-paragraph);
+}
+.social-media-box {
+  float: left;
+}
+.social-media-box a {
+  display: inline-block;
+  margin-right: 15px;
+}
+.footer-bar p {
+  color: #A197B4;
+}
+
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  border: none;
+  border-radius: 64px;
+  text-transform: unset;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
+
+.btn-darken {
+  padding: 0.75rem 2rem;
+  color: var(--color-text-white);
+  background: var(--color-bg-button);
+  box-shadow: var(--shadow-medium);
+}
